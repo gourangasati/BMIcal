@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        This is BMI cal
+    </title>
+    <link rel="stylesheet" type = "text/css" href = "{{url_for('static',filename='style.css')}}">
+    <h1> Here you will calculate your BMI : <br>
+    </h1>
+</head>
+<body>
+    <div>
+        Write the below details: <br>
+        <form class = "pure-form" method="POST" action="/">
+            Weight :<br>
+            <input type = "number" name = "weight"><br>
+            Height :<br>
+            <input type = "number" name = "height"><br>
+            <br>
+            <button type="submit" class="pure-button pure-button-primary" value="submit"> Submit</button>
+        </form>
+    </div>
+    <br>
+    <div>
+        hello
+        {% if Bmi is not none %}
+        Your BMI is: {{ "%.2f"|format(Bmi) }}
+    {% endif %}
+    </div>
+</body>
